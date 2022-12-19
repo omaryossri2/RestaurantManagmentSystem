@@ -1,13 +1,14 @@
 ﻿using System;
 namespace RestManagmentSystem
 {
-	public class Employee
+	public abstract class Employee
 	{
-		private String name;
-		public Employee(String name)
-		{
-			this.name = name;
-		}
-	}
+		private String Name { get; set; }
+        private String Email { get; set; }
+        private String Password { get; set; }
+        public Employee()
+        {
+            
+        }
+    }
 }
-
