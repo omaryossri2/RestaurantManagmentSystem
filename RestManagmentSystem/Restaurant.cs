@@ -4,7 +4,7 @@ namespace RestManagmentSystem
 	public class Restaurant
 	{
 		public String name {set; get;}
-		List<Branch> branches;
+		List<Branch> branches = new List<Branch>();
 		public Restaurant()
 		{
 

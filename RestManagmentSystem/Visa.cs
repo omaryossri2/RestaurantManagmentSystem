@@ -9,7 +9,7 @@ namespace RestManagmentSystem
 
         public bool pay(double amount)
         {
-            Console.WriteLine("Paid with visa");
+            Console.WriteLine("Paid with Visa");
 
             return true;
         }
