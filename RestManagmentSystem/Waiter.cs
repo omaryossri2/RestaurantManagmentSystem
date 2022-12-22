@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RestManagmentSystem
 {
-    public class Waiter
+    public class Waiter : Employee
     {
         private readonly MyContext _context;
 
