@@ -3,7 +3,8 @@ namespace RestManagmentSystem
 {
 	public class Bill
 	{
-		public Order Order { get; set; }
+        
+        public Order Order { get; set; }
 		public IPaymentMethod PaymentMethod;
 
 		public Bill(Order order, IPaymentMethod paymentMethod)
@@ -16,7 +17,6 @@ namespace RestManagmentSystem
 		{
             PaymentMethod.pay(Order.getTotalPrice());
 		}
-
 	}
 }
 
