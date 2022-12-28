@@ -4,14 +4,18 @@ namespace RestManagmentSystem
 	public class Restaurant
 	{
 		public String name {set; get;}
-		List<Branch> branches = new List<Branch>();
+		public static List<Branch> branches = new List<Branch>();
 		public Restaurant()
 		{
 
 		}
-		public void addBranch(Branch branch)
+		public static void addBranch(Branch branch)
 		{
 			branches.Add(branch);
+		}
+		public static Branch GetBranch(int id)
+		{
+			return branches[id];
 		}
 	}
 }

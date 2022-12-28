@@ -3,7 +3,7 @@ namespace RestManagmentSystem
 {
 	public class Order
 	{
-		public readonly List<Meal> Meals = new List<Meal>();
+		public List<Meal> Meals = new List<Meal>();
 		public string Id { get; set; }
 
 		public Order()
@@ -19,6 +19,10 @@ namespace RestManagmentSystem
 		{
             return Meals.Aggregate(0.0, (acc, mi) => acc += mi.getTotalPrice());
         }
+		public void addMeals(Meal meal)
+		{
+			Meals.Add(meal);
+		}
     }
 }
 

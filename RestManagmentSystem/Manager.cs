@@ -5,6 +5,7 @@ namespace RestManagmentSystem
 	{
 		public Manager()
 		{
+
 		}
 
 		public void addEmployee(Employee emp)
@@ -16,6 +17,10 @@ namespace RestManagmentSystem
 		{
 
 		}
+		public void createTable(int branchId, int numOfSeats)
+		{
+			Table table = new Table(numOfSeats);
+			Restaurant.branches[branchId].addTable(table);
+		}
 	}
 }
-
