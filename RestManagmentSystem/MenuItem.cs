@@ -4,8 +4,8 @@ namespace RestManagmentSystem
 	public class MenuItem : MenuComponent
 	{
 		public string type { set; get; }
-
-		public MenuItem()
+        public int id { set; get; }
+        public MenuItem()
 		{
 		}
 

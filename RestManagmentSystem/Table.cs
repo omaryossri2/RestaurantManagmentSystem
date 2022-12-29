@@ -6,11 +6,12 @@ namespace RestManagmentSystem
 
         public int Id { get; set; }
         public int numOfSeats { get; set; }
-        public bool isAvailable { get; set; }
-        private Order _order;
+        public bool isAvailable{ get; set; }
+        public Order _order { get; set; }
 
         public Table()
 		{
+
 		}
         public Table(int numOfSeats)
         {

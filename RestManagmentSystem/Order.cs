@@ -19,7 +19,7 @@ namespace RestManagmentSystem
 		{
             return Meals.Aggregate(0.0, (acc, mi) => acc += mi.getTotalPrice());
         }
-		public void addMeals(Meal meal)
+		public void addMeal(Meal meal)
 		{
 			Meals.Add(meal);
 		}

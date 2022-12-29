@@ -10,13 +10,11 @@ namespace RestManagmentSystem
 		{
 			Restaurant.branches[branchId].tables[TableId].createNewOrder();
 		}
-		public Order MakeOrderOutOfMeals(List<Meal>meals)
+		public void AddMealToOrder(int branchId, int TableId, Meal meal)
 		{
-			Order order= new Order();
-			order.Meals = meals;
-			return order;
+			Restaurant.branches[branchId].tables[TableId]._order.addMeal(meal);
 		}
-		public void addToOrder(int branchId, int TableId, Order order)
+		public void addOrder(int branchId, int TableId, Order order)
 		{
 			Restaurant.branches[branchId].tables[TableId].addOrder(order);
         }

@@ -5,7 +5,7 @@ namespace RestManagmentSystem
 {
 	public class Meal
 	{
-		List<MenuItem> MealItems = new List<MenuItem>();
+		List<MenuItem> MenuItems = new List<MenuItem>();
 		StringBuilder description = new StringBuilder();
 		public int seatNo { get; set; }
 
@@ -15,14 +15,14 @@ namespace RestManagmentSystem
 
 		public void addItem(MenuItem item)
 		{
-			MealItems.Add(item);
+			MenuItems.Add(item);
 			description.Append(item.ItemName + " ");
 
 		}
 
 		public double getTotalPrice()
 		{
-			return MealItems.Aggregate(0.0, (acc, mi) => acc += mi.Price);
+			return MenuItems.Aggregate(0.0, (acc, mi) => acc += mi.Price);
 		}
 		public StringBuilder getMealDescription()
 		{

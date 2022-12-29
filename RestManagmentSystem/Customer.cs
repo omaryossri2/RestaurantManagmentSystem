@@ -9,6 +9,12 @@ namespace RestManagmentSystem
         public Customer()
 		{
 		}
+        public Customer(string name, string phoneNumber, string email)
+        {
+            this.Name = name;
+            this.email = email;
+            this.phoneNumber = phoneNumber;
+        }
 
-	}
+    }
 }
