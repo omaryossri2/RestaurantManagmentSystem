@@ -9,7 +9,7 @@ namespace RestManagmentSystem
 		{
 		}
 
-        public MenuItem(string itemName, double price, int id, string description) : base(itemName, price, id, description)
+        public MenuItem(string itemName, double price, string description) : base(itemName, price, description)
         {
 
         }

@@ -24,5 +24,26 @@ public class ManagerController : ControllerBase
         manager.createTable(branchId, numOfSeats);
         return StatusCode(201);
     }
+    [HttpGet]
+    [Route("GetReservationWithId")]
+    public Reservation GetReservationWithId(int branchId, int ReservationId)
+    {
+        return Restaurant.branches[branchId].GetReservation(ReservationId);
+    }
+    [HttpGet]
+    [Route("GetMenuItems")]
+    public Menu GetMenu(int branchID)
+    {
+        return Restaurant.branches[branchID].menu;
+    }
+
+    [HttpPost]
+    [Route("PostMenuItems")]
+    public ActionResult PostMenuItems(int branchId, string name,double price, string description)
+    {
+        MenuItem menuItem = new MenuItem (name,price,description);
+        Restaurant.branches[branchId].menu.add(menuItem);
+        return StatusCode(201);
+    }
 
 }

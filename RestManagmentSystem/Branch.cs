@@ -7,7 +7,7 @@ namespace RestManagmentSystem
 		public String branchLocation { set; get; }
 		public List<Reservation> reservations = new List<Reservation>();
 		int id;
-		public Menu menu { set; get; }
+		public Menu menu;
 		public Branch(string branchLocation)
 		{
 			this.branchLocation = branchLocation;

@@ -13,11 +13,10 @@ namespace RestManagmentSystem
 
 		}
 
-        public MenuComponent(string itemName, double price, int id, string description)
+        public MenuComponent(string itemName, double price, string description)
         {
             ItemName = itemName;
             Price = price;
-            Id = id;
             Description = description;
         }
 
