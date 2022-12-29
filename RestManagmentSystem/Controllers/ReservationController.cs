@@ -35,4 +35,22 @@ public class ReservationController : ControllerBase
     {
         return Restaurant.branches[branchId].GetReservation(ReservationId);
     }
+
+    [HttpGet]
+    [Route("GetAllAvaialbleTables")]
+    public List<Table> GetAllAvaialbleTables(int branchId)
+    {
+        List<Table> AvialableTables = new List<Table>();
+        for(int i = 0; i < Restaurant.branches[branchId].tables.Count; i++)
+        {
+            if (DateTime.Now < Restaurant.branches[branchId].tables[i].reservation.reservationTime)
+            {
+                Restaurant.branches[branchId].tables[i].isAvailable = true;
+                AvialableTables.Add(Restaurant.branches[branchId].tables[i]);
+            }
+        }
+        return Restaurant.branches[branchId].tables;
+    }
+
+
 }

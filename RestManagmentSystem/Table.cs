@@ -8,6 +8,7 @@ namespace RestManagmentSystem
         public int numOfSeats { get; set; }
         public bool isAvailable{ get; set; }
         public Order _order { get; set; }
+        public Reservation reservation;
 
         public Table()
 		{
